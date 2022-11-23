@@ -790,7 +790,7 @@ async fn make_request(test_state: &mut TestState, command: &str) {
 
 // Test controlling a load test with Telnet.
 #[tokio::test(flavor = "multi_thread", worker_threads = 8)]
-#[ignore]
+#[ignore = "hangs"]
 async fn test_telnet_controller() {
     run_standalone_test(TestType::Telnet).await;
 }
